@@ -5,7 +5,8 @@
     align-items: center;
     max-width: 1440px;
     margin: auto;
-    padding: 40px 60px 40px 60px
+    padding: 40px 60px 40px 60px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .logo_container {
@@ -15,11 +16,11 @@
 }
 
 .logo_img {
-    width: 50px;
+    width: 40px;
 }
 
 .title {
-    font-size: 36px;
+    font-size: 32px;
     font-weight: 600;
     color: white;
     user-select: none;
@@ -29,12 +30,24 @@
     font-weight: 600;
     gap: 30px;
     display: flex;
+    padding: 0px 10px;
+    position: relative;
 }
 
 .nav_item {
-    color: black;
+    color: white;
+    font-size: 16px;
+    padding: 5px 15px;
 
     &:hover {
         color: white;
     }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    border-radius: 5px;
 }
