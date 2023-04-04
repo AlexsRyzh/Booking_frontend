@@ -1,9 +1,12 @@
+import { RouterProvider } from "react-router";
+import router from './routers/AppRouter'
+import './styles/reset.scss'
 
 function App() {
   return (
-    <div>
-      Hello world
-    </div>
+    <RouterProvider
+      router={router}
+    />
   );
 }
 

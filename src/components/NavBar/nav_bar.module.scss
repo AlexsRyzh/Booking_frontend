@@ -1,0 +1,40 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+    padding: 40px 60px 40px 60px
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo_img {
+    width: 50px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    color: white;
+    user-select: none;
+}
+
+.nav {
+    font-weight: 600;
+    gap: 30px;
+    display: flex;
+}
+
+.nav_item {
+    color: black;
+
+    &:hover {
+        color: white;
+    }
+}
