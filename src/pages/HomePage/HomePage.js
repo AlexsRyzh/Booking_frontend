@@ -1,4 +1,5 @@
 import React from 'react'
+<<<<<<< HEAD
 import styles from './home_page.module.scss'
 import NavBar from '../../components/NavBar/NavBar'
 import Carousel from '../../components/Carousel/Carousel'
@@ -48,5 +49,11 @@ export const HomePage = () => {
 
         </div>
 
+=======
+
+export const HomePage = () => {
+    return (
+        <div>HomePage</div>
+>>>>>>> 03ef4fb8c59c822f8a61cd0b6cbc5dfae1b7a9c4
     )
 }
