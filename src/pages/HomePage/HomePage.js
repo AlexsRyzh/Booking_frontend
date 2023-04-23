@@ -8,7 +8,8 @@ import img_sl2 from '../../assets/slider_2.png'
 import img_sl3 from '../../assets/image3.png'
 import img_sl4 from '../../assets/image4.png'
 import BlockTitle from '../../components/BlockTitle/BlockTitle'
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import CustomSwipper from '../../components/CustomeSwipper/CustomSwipper'
 
 export const HomePage = () => {
     return (
@@ -42,6 +43,7 @@ export const HomePage = () => {
                 <BlockTitle
                     title={'Особые предложения'}
                 />
+                <CustomSwipper />
             </div>
 
         </div>

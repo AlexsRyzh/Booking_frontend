@@ -1,0 +1,23 @@
+.container {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F14868;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        background: white;
+        color: #F14868;
+        border: #F14868 solid 2px;
+    }
+}
+
+.arrow {
+    font-size: 30px;
+    width: 20px;
+}

@@ -1,0 +1,86 @@
+.container {
+    cursor: pointer;
+}
+
+.img_container {
+    position: relative;
+    width: 250px;
+}
+
+.img {
+    width: 250px;
+    height: 350px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: 0;
+}
+
+.star {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.price_container {
+    padding: 20px 10px;
+    background: #FFFFFF;
+    width: fit-content;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: -15px;
+    bottom: -15px;
+}
+
+.rub {
+    color: #F14868;
+    font-size: 35px;
+    width: 30px;
+}
+
+.price {
+    color: #F14868;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.desc_container {
+    margin-top: 30px;
+}
+
+.title {
+    font-size: 32px;
+    color: #070526;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+}
+
+.desc {
+    color: #070526;
+    font-size: 16px;
+    opacity: 0.6;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    width: 240px;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+.btn {
+    color: white;
+    padding: 10px;
+    display: block;
+    width: fit-content;
+    background: #F14868;
+    font-size: 16px;
+    border-radius: 10px;
+    margin-top: 10px;
+
+    &:hover {
+        background: white;
+        color: #F14868;
+    }
+}

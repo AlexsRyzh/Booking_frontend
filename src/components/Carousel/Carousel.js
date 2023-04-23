@@ -81,7 +81,8 @@ const Carousel = ({ children, infinite, ...props }) => {
                 style={{
                     transform: `translateX(-${offset * width}px)`,
                     transitionDuration: `${transitionDuration}ms`,
-                    width: `${width}px`
+
+
                 }}
             >
                 {pages}
