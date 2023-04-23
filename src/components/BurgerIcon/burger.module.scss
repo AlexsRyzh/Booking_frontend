@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.line {
+    display: block;
+    width: 27px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+}
+
+.transition {
+    transition: 0.4s;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.top_line {
+    transform: translate(0, 9px) rotate(45deg);
+}
+
+.bottom_line {
+    transform: translate(0, -9px) rotate(-45deg);
+}

@@ -4,19 +4,41 @@
     overflow: hidden;
     position: relative;
     min-width: 100vw;
-    height: 800px;
+    height: 600px;
 }
 
 .slider_container {
-    height: 800px;
+    height: 600px;
     display: flex;
     position: absolute;
 }
 
 .slide_img {
     min-width: 100vw;
-    height: 800px;
+    height: 600px;
     object-fit: cover;
     object-position: top;
     filter: brightness(80%)
+}
+
+.progress {
+    z-index: 3;
+    position: absolute;
+    bottom: 150px;
+    display: flex;
+    gap: 5px;
+}
+
+.line {
+    width: 20px;
+    height: 7px;
+    background: #E8E9F0;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.active {
+    width: 30px;
+    background: #F14868;
 }

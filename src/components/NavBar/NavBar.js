@@ -2,9 +2,16 @@ import React, { useEffect, useRef, useState } from 'react'
 import styles from './nav_bar.module.scss'
 import logo from '../../assets/earth.png'
 import { Link } from 'react-router-dom'
-import { HOME_ROUTER } from '../../core/utils/consts'
+import { HOME_ROUTER } from '../../constants/consts'
 import RippleButton from '../RippleButton/RippleButton'
 import { Line } from './Line.styled'
+
+
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Burger from '../BurgerIcon/BurgerIcon'
+
 
 const NavBar = ({ navItems = ['Куда поехать', 'Жильё', 'Блог', 'Карта'] }) => {
     const [navItem, setNavItem] = useState(0)
@@ -12,12 +19,11 @@ const NavBar = ({ navItems = ['Куда поехать', 'Жильё', 'Блог
     const [lineXPosition, setLineXPosition] = useState(0)
     const [transition, setTransition] = useState(0)
 
+
     const navRef = useRef(null)
     const firstNavElemRef = useRef(null)
 
-    const getX = (elem) => {
-        return elem.currentTarget.offsetLeft - navRef.current.offsetLeft
-    }
+    const [open, setOpen] = useState(false)
 
     useEffect(() => {
         if (firstNavElemRef != null) {
@@ -28,14 +34,14 @@ const NavBar = ({ navItems = ['Куда поехать', 'Жильё', 'Блог
                 setTransition(500)
             }, 0)
         }
-    }, [firstNavElemRef])
+    }, [])
 
     return (
         <div className={styles['container']}>
             <Link to={HOME_ROUTER}>
                 <RippleButton className={styles.button} opacity={0.2} duration={1000}>
                     <div className={styles['logo_container']}>
-                        <img src={logo} className={styles['logo_img']} />
+                        <img src={logo} className={styles['logo_img']} alt='' />
                         <h1 className={styles['title']}>
                             Мир
                         </h1>
@@ -50,7 +56,7 @@ const NavBar = ({ navItems = ['Куда поехать', 'Жильё', 'Блог
                             setNavItem(index)
                             setLineWidth(e.currentTarget.offsetWidth)
                             setLineXPosition(e.currentTarget.offsetLeft)
-                        }} ref={index == 0 ? firstNavElemRef : null}>
+                        }} ref={index === 0 ? firstNavElemRef : null}>
                             {value}
                         </Link>
                     ))
@@ -60,7 +66,11 @@ const NavBar = ({ navItems = ['Куда поехать', 'Жильё', 'Блог
                     position1={lineXPosition}
                     transition1={transition}
                 />
+
+
+                <Burger active={open} setActive={setOpen} />
             </div>
+
         </div>
     )
 }

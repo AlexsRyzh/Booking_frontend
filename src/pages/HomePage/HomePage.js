@@ -7,14 +7,15 @@ import img_sl1 from '../../assets/home_slider.png'
 import img_sl2 from '../../assets/slider_2.png'
 import img_sl3 from '../../assets/image3.png'
 import img_sl4 from '../../assets/image4.png'
+import BlockTitle from '../../components/BlockTitle/BlockTitle'
 
 
 export const HomePage = () => {
     return (
         <div className={styles['container']}>
-            <div className={styles['nav_container']}>
+            {/* <div className={styles['nav_container']}>
                 <NavBar />
-            </div>
+            </div> */}
             <Carousel infinite>
                 <CarouselPage
                     img={img_sl1}
@@ -37,6 +38,12 @@ export const HomePage = () => {
                     price={123435}
                 />
             </Carousel>
+            <div className={styles['content']}>
+                <BlockTitle
+                    title={'Особые предложения'}
+                />
+            </div>
+
         </div>
 
     )

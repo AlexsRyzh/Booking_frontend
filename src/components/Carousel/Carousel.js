@@ -1,28 +1,36 @@
 import React, { useState, useEffect, cloneElement, Children } from 'react'
 import styles from './carousel.module.scss'
 import useWindowSize from '../../hooks/useWindowSize'
-import slider_img from '../../assets/home_slider.png'
 
 const TRANSITION_DURATION = 500
 
 
 
-const Carousel = ({ children, infinite }) => {
+const Carousel = ({ children, infinite, ...props }) => {
 
-    const { width, height } = useWindowSize()
+    const { width } = useWindowSize()
     const [pages, setPages] = useState([])
     const [clonesCount, setClonesCount] = useState({ head: 0, tail: 0 })
     const [offset, setOffset] = useState(1)
     const [transitionDuration, setTransitionDuration] = useState(0)
+    const [leftMargin, setLeftMargin] = useState(0)
+    const lines = new Array(children.length).fill(0)
+
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            setOffset(offset => offset + 1)
-        }, 15000)
-        return () => {
-            clearInterval(interval)
-        }
-    }, [])
+        setLeftMargin((width - 1440) / 2)
+    }, [width])
+
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setOffset(offset => offset + 1)
+    //     }, 5000)
+    //     console.log(1)
+    //     return () => {
+    //         console.log(2)
+    //         clearInterval(interval)
+    //     }
+    // }, [offset])
 
     useEffect(() => {
         if (infinite) {
@@ -56,7 +64,6 @@ const Carousel = ({ children, infinite }) => {
             }, TRANSITION_DURATION)
             return
         }
-        console.log(pages.length)
         // с элемента n (clone) -> к элементу 1 (реальный)
         if (offset === 0) {
             setTimeout(() => {
@@ -78,6 +85,18 @@ const Carousel = ({ children, infinite }) => {
                 }}
             >
                 {pages}
+            </div>
+            <div className={styles['progress']} style={{
+                left: `${60 + (leftMargin > 0 ? leftMargin : 0)}px`
+            }}>
+                {lines.map((value, index) => (
+                    <div
+                        className={styles['line'] + " " + ((offset === index + 1) ? styles['active'] : "")}
+                        onClick={() => {
+                            setOffset(index + 1)
+                        }}
+                        key={index}></div>
+                ))}
             </div>
         </div>
     )

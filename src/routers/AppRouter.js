@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { HOME_ROUTER } from "../core/utils/consts";
+import { HOME_ROUTER } from "../core/constants/consts";
 import { HomePage } from "../pages/HomePage/HomePage";
 
 
