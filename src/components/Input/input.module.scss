@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    background: #2B2352;
+    border-radius: 3px;
+    padding: 15px;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+
+
+    &::before {
+        content: '';
+        display: block;
+        height: 100%;
+        width: 4px;
+        background: #EF5774;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
+.label {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8A8A8A;
+    margin-bottom: 3px;
+
+}
+
+.input_container {
+    position: relative;
+}
+
+.input {
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    width: 100%;
+    spa
+
+    &::placeholder {
+        color: white;
+        opacity: 0.5;
+    }
+}
