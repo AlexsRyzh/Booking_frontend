@@ -38,12 +38,12 @@ export const HomePage = () => {
                     price={123435}
                 />
             </Carousel>
-            <div className={styles['content']}>
+            {/* <div className={styles['content']}>
                 <BlockTitle
                     title={'Особые предложения'}
                 />
                 <CustomSwipper />
-            </div>
+            </div> */}
 
         </div>
 
