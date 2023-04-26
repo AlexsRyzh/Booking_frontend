@@ -1,37 +1,34 @@
+## Сервис бронирования отелей "МИР"
 
-Сайт booking
-Стэк:
-React + Flask + PosgresSql + Docker + Redux
+МИР - это веб-приложение, позволяющее подбирать отели и туры, а также осуществлять их бронирование. 
 
-# Getting Started with Create React App
+## Инструменты
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Перечисление инструментов использованных в процессе разработки:
 
-## Available Scripts
+* **Front-end** - В качестве основного фреймворка используется React. Для управления состояниями применяется Redux.
+* **Back-end** - Python является основным языком для всех сервисов. Фреймворком выбран Flask.
+* **Data** - Все данные хранятся с применением PostgreSQL. 
 
-In the project directory, you can run:
+![Core stack](./src/assets/core-stack.png)
+
+## Зависимости
+
+Для запуска проекта требуются следующие компоненты:
+
+* [Node 10 or greater](https://nodejs.org/en/download/)
+* [React](https://react.dev/learn/add-react-to-an-existing-project)
+* [Sass](https://www.npmjs.com/package/sass)
+* [Python 3.7 or greater](https://realpython.com/installing-python/)
+* [Flask](https://flask.palletsprojects.com/en/2.3.x/installation/)
+* [Docker](https://docs.docker.com/install/)
+
+## Запуск
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Запускает приложение в режиме разработки.\
+Для просмотра необходимо открыть [http://localhost:3000](http://localhost:3000) в браузере.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
+Страница будет обновляться автоматически при внесении изменений.\
+Кроме того в консоли будут отображаться lint ошибки.
