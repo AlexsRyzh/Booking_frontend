@@ -1,0 +1,91 @@
+.container {
+    display: flex;
+    gap: 20px;
+    min-width: 410px
+}
+
+.logo_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo_img {
+    width: 50px;
+    height: 50px;
+}
+
+.log_text {
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    color: white;
+}
+
+.btn_container {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+
+.btn {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    position: relative;
+
+    .line {
+        display: block;
+        width: 103%;
+        height: 3px;
+        background: white;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        border-radius: 5px;
+    }
+
+    &:hover {
+        color: #EF5774;
+
+        & .line {
+            background: #EF5774;
+        }
+    }
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 550px) {
+    .container {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 0;
+    }
+
+    .logo_img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .btn_container {
+        gap: 20px
+    }
+
+    .log_text {
+        font-size: 36px;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+}

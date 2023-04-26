@@ -47,11 +47,7 @@ const CustomSwipper = () => {
             >
                 {
                     arr.map(() => (
-                        <SwiperSlide style={{
-                            width: 'fit-content',
-                            display: 'flex',
-                            justifyContent: 'center'
-                        }}>
+                        <SwiperSlide >
                             <CountryCard />
                         </SwiperSlide>
                     ))

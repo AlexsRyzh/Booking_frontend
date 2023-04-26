@@ -1,3 +1,8 @@
+//Название сайта
+export const NAME = 'Мир'
+
+//Путь к серверу
+export const SERVER_LOCATION = ''
 
 //Путь до страниццы регистрации и входа
 export const LOGIN_ROUTER = '/login'
